@@ -37,12 +37,14 @@ jobs:
       - name: Install backend dependencies & tests
         run: |
           pip install -r src/backend/requirements.txt
-          pytest src/backend/tests/
+          cd src/backend
+          pytest tests/
 
       - name: Install frontend dependencies & tests
         run: |
           pip install -r src/frontend/requirements.txt
-          pytest src/frontend/tests/
+          cd src/frontend
+          pytest tests/
 
   build:
     name: Build Docker Images
