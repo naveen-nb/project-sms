@@ -43,8 +43,7 @@ jobs:
         run: |
           pip install -r src/frontend/requirements.txt
           PYTHONPATH=src/frontend pytest src/frontend/tests/
-
-docker:
+  docker:
     name: Build & Push Docker Images
     needs: test
     runs-on: ubuntu-latest
