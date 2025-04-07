@@ -28,11 +28,11 @@ jobs:
 
       - name: Lint Backend
         run: |
-          flake8 backend/
+          flake8 src/backend/
 
       - name: Lint Frontend
         run: |
-          flake8 frontend/
+          flake8 src/frontend/
 
       - name: Install backend dependencies & tests
         run: |
