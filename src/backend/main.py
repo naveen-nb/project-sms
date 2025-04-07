@@ -12,6 +12,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+
 @app.get("/api/greeting")
 def read_greeting():
     return {"message": "Hello from the backend!"}
