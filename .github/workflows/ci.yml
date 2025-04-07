@@ -24,7 +24,7 @@ jobs:
 
       - name: Install tools
         run: |
-          pip install flake8 pytest
+          pip install flake8 pytest httpx
 
       - name: Lint Backend
         run: |
