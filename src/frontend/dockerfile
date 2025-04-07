@@ -14,14 +14,14 @@ RUN apt-get update && \
 WORKDIR /app
 
 # Copy the requirements file
-COPY frontend/requirements.txt /app/requirements.txt
+COPY src/frontend/requirements.txt /app/requirements.txt
 
 # Install Python dependencies
 RUN pip install --upgrade pip
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy the application code
-COPY frontend/ /app
+COPY src/frontend/ /app
 
 # Create a non-root user
 RUN adduser --disabled-password appuser && \
